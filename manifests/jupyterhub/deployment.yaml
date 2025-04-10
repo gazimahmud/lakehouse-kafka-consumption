@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyterhub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jupyterhub
+  template:
+    metadata:
+      labels:
+        app: jupyterhub
+    spec:
+      containers:
+        - name: jupyterhub
+          image: jupyter/pyspark-notebook:latest
+          ports:
+            - containerPort: 8888
+          volumeMounts:
+            - name: notebooks
+              mountPath: /home/jovyan/work
+      volumes:
+        - name: notebooks
+          emptyDir: {}
