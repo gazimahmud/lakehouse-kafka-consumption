@@ -1,6 +1,4 @@
 ## This is a scaffolded multi-component Kubernetes-based Data Lakehouse prototype project
-## using MinIO, Kafka (KRaft mode), Spark, Delta Lake, and JupyterHub, all deployable on a local KIND cluster.
-
 version: '0.1'
 components:
   - name: documentation
