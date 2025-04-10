@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: spark-streaming-job
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: spark-job
+          image: bitnami/spark:latest
+          command:
+            - "/opt/bitnami/spark/bin/spark-submit"
+            - "--master"
+            - "spark://spark-master:7077"
+            - "/opt/spark-apps/spark_streaming.py"
+          volumeMounts:
+            - name: spark-apps
+              mountPath: /opt/spark-apps
+      volumes:
+        - name: spark-apps
+          emptyDir: {}
