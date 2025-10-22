@@ -5,7 +5,7 @@ components:
     files:
       - README.md
         content: |
-          # 🧪 Lakehouse Prototype on Kubernetes (Local Workstation / MacBook)
+          # Lakehouse Prototype on Kubernetes (Local Workstation / MacBook)
 
           This project demonstrates a modern, end-to-end **Lakehouse architecture** running entirely on your local machine using containers and Kubernetes. It includes:
 
@@ -19,7 +19,7 @@ components:
 
           ---
 
-          ## 📋 Prerequisites
+          ## Prerequisites
 
           Ensure the following tools are installed:
 
@@ -33,7 +33,7 @@ components:
 
           ---
 
-          ## 🗂 Project Structure
+          ## Project Structure
 
           ```text
           ├── kind-config.yaml               # KIND cluster definition
@@ -51,7 +51,7 @@ components:
 
           ---
 
-          ## 🚀 Quick Start (MacBook / Linux Workstation)
+          ## Quick Start (MacBook / Linux Workstation)
 
           ### 1. Clone the Repository
           ```bash
@@ -109,7 +109,7 @@ components:
 
           ---
 
-          ## 🧹 Tear Down
+          ## Tear Down
 
           ```bash
           make delete-cluster
@@ -129,7 +129,7 @@ components:
 
           ---
 
-          ## 🧪 Use Cases Demonstrated
+          ## Use Cases Demonstrated
 
           - Real-time file-based ingestion via Kafka
           - Delta Lake table creation and incremental append
@@ -138,7 +138,7 @@ components:
 
           ---
 
-          ## 📜 License
+          ## License
           MIT
 
           ---
